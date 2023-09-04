@@ -49,14 +49,22 @@ namespace Basics
             
             */
 
-            // 4 Swap digit
+            /* 4 Swap digit
             int number = int.Parse(Console.ReadLine());
             if (number < 100000 || number > 999999)
                 throw new Exception("Wrong number");
-            int first = int.Parse(Console.ReadLine());
-            int second = int.Parse(Console.ReadLine());
 
-            //
+            int razrad_1 = int.Parse(Console.ReadLine());
+            int razrad_2 = int.Parse(Console.ReadLine());
+
+            int cifra_1 = (number / (int)Math.Pow(10, razrad_1 - 1)) % 10;
+            int cifra_2 = (number / (int)Math.Pow(10, razrad_2 - 1)) % 10;
+
+            number += - cifra_1 * (int)Math.Pow(10, razrad_1 - 1) + cifra_2 * (int)Math.Pow(10, razrad_1 - 1);
+            number += - cifra_2 * (int)Math.Pow(10, razrad_2 - 1) + cifra_1 * (int)Math.Pow(10, razrad_2 - 1);
+
+            Console.WriteLine(number);
+            */
 
             /* 6 F-C converter
             int temperature = int.Parse(Console.ReadLine());
